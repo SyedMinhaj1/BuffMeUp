@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buff Me Up | Trainers</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .train{
+        width: 100%;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+    }
+    .train h1{
+        padding: 10px;
+        border-top: 3px solid whitesmoke;
+        border-bottom: 3px solid whitesmoke;
+    }
+    .tr {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        transition: transform 0.3s ease;
+    }
+
+    .tr:hover {
+        transform: translateY(-5px);
+    }
+
+    .tr img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .info {
+        padding: 20px;
+    }
+
+    .info ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .info ul li {
+        margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: block;
+        margin: 20px auto 0;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<body>
+    <header id="myHeader" class="animate-header">
+        <div class="logo">
+            <img src="muscle.png" alt="Logo">
+        </div>
+        <div class="buff">
+            <h1><span>Buff Me Up </span>
+                Say No To Excuses</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="toggle-btn" onclick="myFunction();">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="workout.html">Workouts</a></li>
+            <li><a href="diets.html">Diets</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="train">
+        <h1>Our Best Personal Trainers</h1>
+    </div>
+        <div class="tr tr1">
+            <img src="trainer1.jpg" alt="">
+            <div class="info">
+                <ul>
+                    <li>Name: Alex Johnson</li>
+                    <li>Experience: 5 years in personal training</li>
+                    <li>Specialization: Functional training and CrossFit</li>
+                    <li>Certifications: NASM Certified Personal Trainer, CrossFit Level 1 Trainer</li>
+                    <li>Fun Fact: Alex is a former collegiate athlete who brings his competitive spirit to every
+                        session.</li>
+                </ul>
+                <button type="submit" onclick="alert('Our Trainer Will Contact You Shortly')">Hire</button>
+            </div>
+        </div>
+        <div class="tr tr2">
+            <img src="trainer2.jpg" alt="">
+            <div class="info">
+                <ul>
+                    <li>Name: Sarah Parker</li>
+                    <li>Experience: 7 years in fitness coaching</li>
+                    <li>Specialization: Yoga and Pilates</li>
+                    <li>Certifications: Yoga Alliance Registered Yoga Teacher (RYT-200), Pilates Method Alliance
+                        Certified Instructor</li>
+                    <li>Fun Fact: Sarah is also a professional dancer and incorporates elements of dance into her
+                        classes.</li>
+                </ul>
+                <button type="submit" onclick="alert('Our Trainer Will Contact You Shortly')">Hire</button>
+            </div>
+        </div>
+        <div class="tr tr3">
+            <img src="trainer3.jpg" alt="">
+            <div class="info">
+                <ul>
+                    <li>Name: Michael Thompson</li>
+                    <li>Experience: 10 years in strength and conditioning</li>
+                    <li>Specialization: Powerlifting and Olympic weightlifting</li>
+                    <li>Certifications: ISSA Certified Strength and Conditioning Coach, USA Weightlifting Sports
+                        Performance Coach</li>
+                    <li>Fun Fact: Michael holds several state records in powerlifting competitions.</li>
+                </ul>
+                <button type="submit" onclick="alert('Our Trainer Will Contact You Shortly')">Hire</button>
+            </div>
+        </div>
+        <div class="tr tr4">
+            <img src="trainer4.jpg" alt="">
+            <div class="info">
+                <ul>
+                    <li>Name: Marcus Lee</li>
+                    <li>Experience: 9 years in fitness coaching</li>
+                    <li>Specialization: Martial arts and self-defense training</li>
+                    <li>Certifications: Black Belt in Brazilian Jiu-Jitsu, ACE Certified Personal Trainer</li>
+                    <li>Fun Fact: Marcus has competed in multiple martial arts tournaments and enjoys teaching his
+                        clients the art of self-defense.</li>
+                </ul>
+                <button type="submit" onclick="alert('Our Trainer Will Contact You Shortly')">Hire</button>
+            </div>
+        </div>
+        <div class="tr tr5">
+            <img src="trainer5.jpg" alt="">
+            <div class="info">
+                <ul>
+                    <li>Name: David Martinez</li>
+                    <li>Experience: 6 years in fitness coaching</li>
+                    <li>Specialization: Functional training and corrective exercise</li>
+                    <li>Certifications: NASM Certified Personal Trainer, Corrective Exercise Specialist</li>
+                    <li>Fun Fact: David is fluent in three languages and enjoys traveling to learn about different
+                        fitness cultures.</li>
+                </ul>
+                <button type="submit" onclick="alert('Our Trainer Will Contact You Shortly')">Hire</button>
+            </div>
+        </div>
+        <div class="tr tr6">
+            <img src="trainer6.jpg" alt="">
+            <div class="info">
+                <ul>
+                    <li>Name: Ryan Miller</li>
+                    <li>Experience: 4 years in personal training</li>
+                    <li>Specialization: Bodybuilding and physique competition prep</li>
+                    <li>Certifications: ISSA Certified Fitness Trainer, NPC Competitor Coach</li>
+                    <li>Fun Fact: Ryan is a published fitness model and has appeared in several magazines.</li>
+                </ul>
+                <button type="submit" onclick="alert('Our Trainer Will Contact You Shortly')">Hire</button>
+            </div>
+        </div>
+        <div class="tr tr7">
+            <img src="trainer7.jpg" alt="">
+            <div class="info">
+                <ul>
+                    <li>Name: Adam Wright</li>
+                    <li>Experience: 7 years in personal training</li>
+                    <li>Specialization: CrossFit and functional fitness</li>
+                    <li>Certifications: CrossFit Level 2 Trainer, NASM Certified Personal Trainer</li>
+                    <li>Fun Fact: Adam is also a volunteer firefighter and believes in functional fitness for real-life
+                        situations.</li>
+                </ul>
+                <button type="submit" onclick="alert('Our Trainer Will Contact You Shortly')">Hire</button>
+            </div>
+        </div>
+        <div class="tr tr8">
+            <img src="trainer8.jpg" alt="">
+            <div class="info">
+                <ul>
+                    <li>Name: Tyler Brown</li>
+                    <li>Experience: 5 years in fitness coaching</li>
+                    <li>Specialization: Functional movement and mobility training</li>
+                    <li>Certifications: NSCA Certified Personal Trainer, Functional Movement Systems (FMS) Certified
+                    </li>
+                    <li>Fun Fact: Tyler is an avid rock climber and often incorporates climbing-inspired workouts into
+                        his training sessions.</li>
+                </ul>
+                <button type="submit" onclick="alert('Our Trainer Will Contact You Shortly')">Hire</button>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="main.js"></script>
+
+</html>

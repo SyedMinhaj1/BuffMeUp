@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buff Me Up | Diets</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+    section {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: rgb(7, 150, 185);
+        border: 3px solid firebrick;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    section:hover{
+        box-shadow: 2px 2px 18px yellow;
+    }
+    .sec1 h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="radio"] {
+        margin-right: 6px;
+    }
+
+    input[type="number"] {
+        width: calc(50% - 5px);
+        padding: 5px;
+        margin-bottom: 18px;
+    }
+
+    .sec1 button[type="submit"] {
+        background-color: royalblue;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .sec1 button[type="submit"]:hover {
+        background-color: rgb(255, 255, 255);
+        border: 4px solid darkblue;
+        color: rgb(0, 0, 0);
+        
+    }
+
+    .sec1 h2 {
+        text-align: center;
+        margin-top: 20px;
+        color: black;
+    }
+
+
+    .btndiet {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 100px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .btndiet h2 {
+        color: rgb(8, 8, 8);
+        font-family: sans-serif;
+        margin: 5px 0px;
+        text-decoration: underline;
+
+    }
+
+    .btndiet button {
+        width: 150px;
+        height: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: yellow;
+        text-align: center;
+        border-radius: 25px;
+    }
+
+    .btndiet button:hover {
+        background-color: deepskyblue;
+        border: 3px solid yellow;
+
+    }
+
+    .btn {
+        padding: 8px;
+    }
+
+
+    .plan h1 {
+        text-align: center;
+        margin: 20px 0px;
+        padding: 5px 0px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .plan {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.plan h2 {
+    color: #333;
+    font-size: 24px;
+    margin: 20px 0px;
+    font-family: sans-serif;
+    text-decoration: underline;
+}
+
+.dbtn{
+    width: 150px;
+    margin: 0px 60px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: firebrick;
+    color: white;
+    font-size: 18px;
+    font-family:  sans-serif;
+}
+.dbtn:hover{
+    background-color: white;
+    color: black;
+    border: 4px solid firebrick;
+}
+.plan h3 {
+    color: blue;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+.plan ul {
+    list-style: decimal;
+    margin: 20px 10px;
+    border-bottom: 2px solid ;
+    
+}
+
+.plan ul li {
+    margin: 10px 0px;
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 2;
+}
+
+.plan ul img {
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    
+}
+
+.plan .calo {
+    color: rgb(192, 118, 6);
+    font-size: 19px;
+    list-style: none;
+    border: none;
+   
+}
+
+    .gdietplan2{
+        display: none;
+    }
+    .gdietplan3{
+        display: none;
+    }
+    .ldietplan2{
+        display: none;
+    }
+    .ldietplan3{
+        display: none;
+    }
+    #loss{
+        display: none;
+    }
+</style>
+
+<body>
+    <header id="myHeader" class="animate-header">
+        <div class="logo">
+            <img src="muscle.png" alt="Logo">
+        </div>
+        <div class="buff">
+            <h1><span>Buff Me Up </span>
+                Say No To Excuses</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="toggle-btn" onclick="myFunction();">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="workout.html">Workouts</a></li>
+            <li><a href="diets.html">Diets</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="sec1">
+            <h1>BMI Calculator</h1>
+            <label for="">Select Your Gender:</label><br>
+            <input type="radio" name="Gender" value="male">
+            <label for="">Male &nbsp;</label>
+            <input type="radio" name="Gender" value="female">
+            <label for=""> Female</label><br><br>
+            <label for="">Age</label>
+            <input type="number" name="age"><br>
+            <label for="">Weight</label>
+            <input type="number" name="wt"><br><br>
+            <button type="submit" onclick="cal()">Calculate</button>
+            <h2 id="output"></h2>
+        </div>
+    </section>
+    <main>
+        <div class="btndiet">
+            <div class="gbtn btn">
+                <h2>Diet Plan For Bulking </h2>
+                <a href="#gain">
+                    <button type="submit">Gain Weight</button></a>
+            </div>
+            <div class="lbtn btn">
+                <h2>Diet Plan For Weight Loss</h2>
+                <a href="#loss">
+                    <button type="submit">Lose Weight</button></a>
+            </div>
+        </div>
+        <div class="plan " id="gain">
+            <h1>Weight Gain</h1>
+            <button class="dbtn" id="gdiet1" type="submit">Diet Plan 1</button>
+            <button class="dbtn" id="gdiet2" type="submit">Diet Plan 2</button>
+            <button class="dbtn" id="gdiet3" type="submit">Diet Plan 3</button>
+            <div class="gdietplan1">
+                <h2>Diet Plan 1:</h2>
+                <h3>Breakfast:</h3>
+                <ul>
+                    <li>Scrambled eggs with spinach and cheese (2 eggs, 1 cup spinach, 1/4 cup shredded cheese)</li>
+                    <img src="./Diets/spinach-and-eggs.jpg" alt="">
+                    <li>Whole grain toast (2 slices)</li>
+                    <img src="./Diets/white toast.jpg" alt="">
+                   <li class="calo">Calories: Approximately 500-600</li>
+                </ul>
+
+                <h3>Lunch:</h3>
+                <ul>
+                    <li>Grilled chicken breast (6 oz)</li>
+                    <img src="./Diets/grilled-chicken.jpg" alt="">
+                    <li>Quinoa salad with mixed vegetables (1 cup quinoa, mixed vegetables, olive oil dressing)</li>
+                    <img src="./Diets/Qouina-Vegetable.jpg" alt="">
+                   <li class="calo">Calories: Approximately 600-700</li>
+                </ul>
+
+                <h3>Dinner:</h3>
+                <ul>
+                    <li>Baked salmon fillet (6 oz)</li>
+                    <img src="./Diets/baked-salmon.jpg" alt="">
+                    <li>Sweet potato mash (1 large sweet potato)</li>
+                    <img src="./Diets/mashed-sweet-potato.jpg" alt="">
+                    <li>Steamed broccoli (1 cup)</li>
+                    <img src="./Diets/streamed brocolli.jpg" alt="">
+                   <li class="calo">Calories: Approximately 600-700</li>
+                </ul>
+            </div>
+
+            <div class="gdietplan2">
+                <h2>Diet Plan 2:</h2>
+                <h3>Breakfast</h3>
+                <ul>
+                    <li>Greek yogurt with mixed berries and honey (1 cup yogurt, 1/2 cup mixed berries, 1 tbsp honey)</li>
+                    <img src="./Diets/Greek-Yogurt.jpg" alt="">
+                    <li>Granola (1/2 cup)</li>
+                    <img src="./Diets/granola.jpg" alt="">
+                   <li class="calo">Calories: Approximately 500-600</li>
+                </ul>
+                <h3>Lunch</h3>
+                <li>Turkey and avocado wrap (2 slices of turkey, 1/2 avocado, whole grain wrap)</li>
+                <img src="./Diets/wrap.jpeg" alt="">
+                <li>Mixed green salad with balsamic vinaigrette dressing</li>
+                <img src="./Diets/salad.jpeg" alt="">
+               <li class="calo">Calories: Approximately 600-700</li>
+                <h3>Dinner</h3>
+                <ul>
+                    <li>Lean beef stir-fry with vegetables (6 oz lean beef, mixed vegetables, stir-fry sauce)</li>
+                    <img src="./Diets/leaf green.jpg" alt="">
+                    <li>Brown rice (1 cup)</li>
+                    <img src="./Diets/brown rice.jpg" alt="">
+                   <li class="calo">Calories: Approximately 600-700</li>
+                </ul>
+            </div>
+
+            <div class="gdietplan3">
+                <h2>Diet Plan 3:</h2>
+                <h3>Breakfast</h3>
+                <ul>
+                    <li>Peanut butter banana smoothie (1 banana, 2 tbsp peanut butter, 1 cup milk, 1/2 cup Greek yogurt)
+                    </li>
+                    <img src="./Diets/smoothie.jpg" alt="">
+                    <li>Whole grain toast (2 slices)</li>
+                    <img src="./Diets/white toast.jpg" alt="">
+                   <li class="calo">Calories: Approximately 600-700</li>
+                </ul>
+                <h3>Lunch</h3>
+                <ul>
+                    <li>Tuna salad sandwich on whole grain bread (1 can tuna, mixed with Greek yogurt, diced celery, and
+                        onion)</li>
+                        <img src="./Diets/tuna toast.jpeg" alt="">
+                        <li>Carrot and hummus sticks</li>
+                        <img src="./Diets/carrot.jpeg" alt="">
+                   <li class="calo">Calories: Approximately 500-600</li>
+                </ul>
+                <h3>Dinner</h3>
+                <ul>
+                    <li>Roast chicken thigh (2 pieces)</li>
+                    <img src="./Diets/roasted tigh.jpg" alt="">
+                    <li>Quinoa pilaf with mixed vegetables (1 cup quinoa, mixed vegetables)</li>
+                    <img src="./Diets/quiona new.jpeg" alt="">
+                   <li class="calo">Calories: Approximately 600-700</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="plan " id="loss">
+            <h1>Weight Loss</h1>
+            <button class="dbtn" id="ldiet1" type="submit">Diet Plan 1</button>
+            <button class="dbtn" id="ldiet2" type="submit">Diet Plan 2</button>
+            <button class="dbtn" id="ldiet3" type="submit">Diet Plan 3</button>
+            <div class="ldietplan1">
+                <h2>Diet Plan 1:</h2>
+                <h3>Breakfast</h3>
+                <ul>
+                    <li>Greek yogurt parfait with berries and almonds (1 cup Greek yogurt, 1/2 cup mixed berries, 1 tbsp
+                        sliced almonds)</li>
+                        <img src="./Diets/greek yogurt.jpg" alt="">
+                   <li class="calo">Calories: Approximately 300-350</li>
+                </ul>
+                <h3>Lunch</h3>
+                <ul>
+                    <li>Grilled chicken salad with mixed greens, vegetables, and vinaigrette dressing (4 oz grilled
+                        chicken
+                        breast, mixed greens, vegetables, 1 tbsp vinaigrette dressing)</li>
+                        <img src="Diets/Greek-chicken-salad-recipe-6.jpg" alt="">
+                   <li class="calo">Calories: Approximately 400-450</li>
+                </ul>
+                <h3>Dinner</h3>
+                <ul>
+                    <li>Baked salmon with roasted vegetables (4 oz baked salmon, mixed roasted vegetables)</li>
+                  <img src="./Diets/bakedsalmonwithvegetables.jpeg" alt="">
+                    <li class="calo">Calories: Approximately 400-450</li>
+                </ul>
+            </div>
+
+
+            <div class="ldietplan2">
+                <h2>Diet Plan 2:</h2>
+                <h3>Breakfast</h3>
+                <ul>
+                    <li>Veggie omelette with whole grain toast (2 eggs, mixed vegetables, 1 slice whole grain toast)
+                    </li>
+                    <img src="./Diets/veggie omlet.jpg" alt="">
+                   <li class="calo">Calories: Approximately 350-400</li>
+                </ul>
+                <h3>Lunch</h3>
+                <ul>
+                    <li>Turkey and avocado wrap with side salad (2 slices of turkey, 1/4 avocado, whole grain wrap,mixed green salad with light dressing)</li>
+                   <img src="./Diets/wrap.jpeg" alt="">
+                    <li class="calo">Calories: Approximately 400-450</li>
+                </ul>
+                <h3>Dinner</h3>
+                <ul>
+                    <li>Quinoa stir-fry with tofu and vegetables (1 cup cooked quinoa, 4 oz tofu, mixed vegetables,stir-fry sauce)</li>
+                <img src="./Diets/tofu and vege.jpeg" alt="">
+                    <li class="calo">Calories: Approximately 350-400</li>
+                </ul>
+            </div>
+
+
+            <div class="ldietplan3">
+                <h2>Diet Plan 3:</h2>
+                <h3>Breakfast</h3>
+                <ul>
+                    <li>Spinach and feta cheese omelette with whole grain English muffin (2 eggs, 1 cup spinach, 1 oz
+                        feta
+                        cheese, 1 whole grain English muffin)</li>
+                        <img src="./Diets/spanich cheese.jpeg" alt="">
+                   <li class="calo">Calories: Approximately 300-350</li>
+                </ul>
+                <h3>Lunch</h3>
+                <ul>
+                    <li>Lentil soup with whole grain crackers (1 cup lentil soup, 5 whole grain crackers)</li>
+                   <img src="./Diets/lentil soup.jpg" alt="">
+                    <li class="calo">Calories: Approximately 350-400</li>
+                </ul>
+                <h3>Dinner</h3>
+                <ul>
+                    <li>Grilled shrimp with quinoa and steamed broccoli (4 oz grilled shrimp, 1/2 cup cooked quinoa, 1
+                        cup
+                        steamed broccoli)</li>
+                        <img src="./Diets/grilled shimp.jpeg" alt="">
+                   <li class="calo">Calories: Approximately 400-450</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="main.js"></script>
+<script>
+    var g = document.getElementsByName("Gender");
+    var a = document.getElementsByName("age");
+    var w = document.getElementsByName("wt");
+    var out = document.getElementById("output");
+    function cal() {
+        let gender;
+        for (let i = 0; i < g.length; i++) {
+            if (g[i].checked) {
+                gender = g[i].value;
+                break;
+            }
+        }
+        let age = parseInt(a[0].value);
+        let weight = parseInt(w[0].value);
+        switch (gender) {
+            case "male":
+                if (age <= 20) {
+                    if (weight <= 50) {
+                        out.innerHTML = `under weight`;
+
+                    } else if (weight <= 60) {
+                        out.innerHTML = `normal weight`;
+                    } else {
+                        out.innerHTML = `over weight`;
+                    }
+                } else if (age >= 21 && age <= 30) {
+                    if (weight <= 50) {
+                        out.innerHTML = `under weight`;
+                    } else if (weight <= 70) {
+                        out.innerHTML = `normal weight`;
+                    } else {
+                        out.innerHTML = `over weight`;
+                    }
+                } else if (age >= 31 && age <= 60) {
+                    if (weight <= 50) {
+                        out.innerHTML = `under weight`;
+                    } else if (weight <= 75) {
+                        out.innerHTML = `normal weight`;
+                    } else {
+                        out.innerHTML = `over weight`;
+                    }
+                } else if (age >= 70) {
+                    out.innerHTML = `You are too Old`;
+                } else {
+                    out.innerHTML = `invalid age or weight`;
+                }
+                break;
+            case "female":
+                if (age <= 20) {
+                    if (weight <= 40) {
+                        out.innerHTML = `under weight `;
+
+                    } else if (weight <= 50) {
+                        out.innerHTML = `normal weight `;
+                    } else {
+                        out.innerHTML = `over weight `;
+                    }
+                } else if (age >= 21 && age <= 30) {
+                    if (weight <= 45) {
+                        out.innerHTML = `under weight`;
+                    } else if (weight <= 55) {
+                        out.innerHTML = `normal weight`;
+                    } else {
+                        out.innerHTML = `over weight`;
+                    }
+                } else if (age >= 31 && age <= 60) {
+                    if (weight <= 50) {
+                        out.innerHTML = `under weight`;
+                    } else if (weight <= 60) {
+                        out.innerHTML = `normal weight`;
+                    } else {
+                        out.innerHTML = `over weight`;
+                    }
+                } else if (age >= 70) {
+                    out.innerHTML = `You are too Old`;
+                } else {
+                    out.innerHTML = `invalid age or weight`;
+                }
+                break;
+            default:
+                out.innerHTML = `gender not selected`;
+                break;
+        }
+    }
+
+    $(document).ready(function(){
+    $(".gbtn").click(function() {
+        $("#gain").show();
+        $("#loss").hide();
+    });
+    $(".lbtn").click(function() {
+        $("#loss").show();
+        $("#gain").hide();
+    });
+
+        $("#gdiet1").click(function(){
+            $(".gdietplan1").show();
+            $(".gdietplan2").hide();
+            $(".gdietplan3").hide();
+        });
+        
+        $("#gdiet2").click(function(){
+            $(".gdietplan2").show();
+            $(".gdietplan1").hide();
+            $(".gdietplan3").hide();
+        });
+        
+        
+        $("#gdiet3").click(function(){
+            $(".gdietplan3").show();
+            $(".gdietplan1").hide();
+            $(".gdietplan2").hide();
+        });
+
+
+        $("#ldiet1").click(function(){
+            $(".ldietplan1").show();
+            $(".ldietplan2").hide();
+            $(".ldietplan3").hide();
+        });
+        
+        $("#ldiet2").click(function(){
+            $(".ldietplan2").show();
+            $(".ldietplan1").hide();
+            $(".ldietplan3").hide();
+        });
+        
+        
+        $("#ldiet3").click(function(){
+            $(".ldietplan3").show();
+            $(".ldietplan1").hide();
+            $(".ldietplan2").hide();
+        }); 
+    });
+        
+</script>
+
+</html>
